@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Hotel Room Booking</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <form id="bookingForm">
+   <h2>Hotel Room Booking Form</h2>
+   <label>Full Name:</label>
+   <input type="text" name="fullname" pattern="[A-Za-z ]{2,}" required>
+
+   <label>Email:</label>
+   <input type="email" name="email"
+   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
+   <label>Mobile Number:</label>
+   <input type="text" name="mobile" pattern="[0-9]{10}" required>
+
+   <label>Check-in Date:</label>
+   <input type="date" name="checkin" required>
+
+   <label>Check-out Date:</label>
+   <input type="date" name="checkout" required>
+
+   <label>Number of Guests:</label>
+   <input type="number" name="guests" min="1" max="10" required>
+
+   <label>Room Type:</label>
+   <select name="roomType" required>
+     <option value="">-- Select --</option>
+     <option value="single">Single Room</option>
+     <option value="double">Double Room</option>
+     <option value="suite">Suite</option>
+   </select>
+
+   <label>Special Requests:</label>
+   <textarea name="requests" rows="3"></textarea>
+
+   <div class="terms">
+     <input type="checkbox" id="terms" required>
+     <label for="terms">I accept the Terms & Conditions</label>
+   </div>
+
+   <button type="submit">Book Now</button>
+ </form>
+ <script src="script.js"></script>
+</body>
+</html>
